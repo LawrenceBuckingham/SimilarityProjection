@@ -1,0 +1,143 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KmerRank", "KmerRank\KmerRank.vcxproj", "{8096C561-AB22-4713-95DE-989C507DC43A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utilities", "Utilities\Utilities.vcxproj", "{92D1E20A-0607-412C-9C1B-847F17F51A66}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gui", "Gui\Gui.vcxproj", "{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F3472D2-E9FE-4FE6-8139-4DEDA9324845}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		Release-Projector|Any CPU = Release-Projector|Any CPU
+		Release-Projector|ARM = Release-Projector|ARM
+		Release-Projector|ARM64 = Release-Projector|ARM64
+		Release-Projector|Mixed Platforms = Release-Projector|Mixed Platforms
+		Release-Projector|Win32 = Release-Projector|Win32
+		Release-Projector|x64 = Release-Projector|x64
+		Release-Projector|x86 = Release-Projector|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|ARM.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|ARM64.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|Win32.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|x64.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Debug|x86.ActiveCfg = Debug|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|Any CPU.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|ARM.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|ARM64.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|Mixed Platforms.Build.0 = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|Win32.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|x64.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|x64.Build.0 = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release|x86.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|Any CPU.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|ARM.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|ARM64.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|ARM64.Build.0 = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|Mixed Platforms.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|Mixed Platforms.Build.0 = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|Win32.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|x64.ActiveCfg = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|x64.Build.0 = Release|x64
+		{8096C561-AB22-4713-95DE-989C507DC43A}.Release-Projector|x86.ActiveCfg = Release|x64
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|ARM.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|Win32.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x64.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x86.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x86.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|Any CPU.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|ARM.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|ARM64.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|Mixed Platforms.Build.0 = Release|x64
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|Win32.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|Win32.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x64.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x64.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x86.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x86.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Any CPU.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Any CPU.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|ARM.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|ARM.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|ARM64.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|ARM64.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Mixed Platforms.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Mixed Platforms.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Win32.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|Win32.Build.0 = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|x64.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|x64.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|x86.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release-Projector|x86.Build.0 = Release|Win32
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|ARM.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|ARM64.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|Win32.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|x64.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|x64.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Debug|x86.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|Any CPU.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|ARM.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|ARM64.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|Mixed Platforms.Build.0 = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|Win32.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|x64.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|x64.Build.0 = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release|x86.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Any CPU.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Any CPU.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|ARM.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|ARM.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|ARM64.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|ARM64.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Mixed Platforms.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Mixed Platforms.Build.0 = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Win32.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|Win32.Build.0 = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|x64.ActiveCfg = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|x64.Build.0 = Release|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|x86.ActiveCfg = Debug|x64
+		{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}.Release-Projector|x86.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC435737-1F66-4FA7-9714-1600F745911F}
+	EndGlobalSection
+EndGlobal

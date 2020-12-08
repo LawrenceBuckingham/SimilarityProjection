@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{24EAAA13-6172-42B7-8FD6-FE1EEC1F2921}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>Gui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>make all</NMakeBuildCommandLine>
+    <NMakeOutput>UnitTests.exe</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make rebuild</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>KMER_CLUSTER_021;KMER_CLUSTER_022;KMER_CLUSTER_023;KMER_CLUSTER_024;_HAVE_STDC;__cplusplus=201103L;__CYGWIN__=;__x86_64__=;__extension__=;__asm__(x)=;_cdecl=;__cdecl=;__inline__=inline;_SYMSTR(x)=_ ## x;__timezonefunc__;__attribute__(x)=;__GNUC_VA_LIST;__gnuc_va_list=va_list;__va_list__=;va_list=void *;__builtin_va_list=void *;__INTPTR_TYPE__=int *;int8_t=char;int16_t=short;int32_t=int;int64_t=long long;__int16_t=short;__int32_t=int;__int64_t=long;int64_t=long;__uint16_t=unsigned short;__uint32_t=unsigned;__uint64_t=unsigned long;__INT32_TYPE__=int;__intptr_t=int *;__uintptr_t=unsigned *;_SYS__INTSUP_H=;_STDINT_H=;_MACHINE__DEFAULT_TYPES_H=;__SIZE_TYPE__=unsigned long long;__PTRDIFF_TYPE__=long long;_INTMAX_T_DECLARED=;_UINTMAX_T_DECLARED=;int32_t=long;int_fast8_t=char;int_fast16_t=short;int_fast32_t=long;int_fast64_t=long long;int_least8_t=char;int_least16_t=short;int_least32_t=long;int_least64_t=long long;intmax_t=int;intptr_t=int *;uint8_t=unsigned char;uint16_t=unsigned short;uint32_t=unsigned int;uint64_t=unsigned long long;uint_fast8_t=unsigned char;uint_fast16_t=unsigned short;uint_fast32_t=unsigned int;uint_fast64_t=unsigned long long;uint_least8_t=unsigned char;uint_least16_t=unsigned short;uint_least32_t=unsigned int;uint_least64_t=unsigned long long;uintmax_t=unsigned int;uintptr_t=unsigned int *;_INTPTR_T_DECLARED=;_UINTPTR_T_DECLARED=</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(CYGWIN_ROOT)\usr\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\x86_64-pc-cygwin;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\bits;../Include</NMakeIncludeSearchPath>
+    <ExecutablePath>$(PATH);</ExecutablePath>
+    <IncludePath>$(CYGWIN_ROOT)\usr\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>make -f cygwin.makefile</NMakeBuildCommandLine>
+    <NMakeOutput>TestPackedArray.exe</NMakeOutput>
+    <NMakeCleanCommandLine>make -f cygwin.makefile clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make -f cygwin.makefile COMMIT rebuild</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>POPCOUNT=__builtin_popcountll;TEST_DNA;TEST_PACKED_ARRAY;_HAVE_STDC;__cplusplus=201103L;__CYGWIN__=;__x86_64__=;__extension__=;__asm__(x)=;_cdecl=;__cdecl=;__inline__=inline;_SYMSTR(x)=_ ## x;__timezonefunc__;__attribute__(x)=;__GNUC_VA_LIST;__gnuc_va_list=va_list;__va_list__=;va_list=void *;__builtin_va_list=void *;__INTPTR_TYPE__=int *;int8_t=char;int16_t=short;int32_t=int;int64_t=long long;__int16_t=short;__int32_t=int;__int64_t=long;int64_t=long;__uint16_t=unsigned short;__uint32_t=unsigned;__uint64_t=unsigned long;__INT32_TYPE__=int;__intptr_t=int *;__uintptr_t=unsigned *;_SYS__INTSUP_H=;_STDINT_H=;_MACHINE__DEFAULT_TYPES_H=;__SIZE_TYPE__=unsigned long long;__PTRDIFF_TYPE__=long long;_INTMAX_T_DECLARED=;_UINTMAX_T_DECLARED=;int32_t=long;int_fast8_t=char;int_fast16_t=short;int_fast32_t=long;int_fast64_t=long long;int_least8_t=char;int_least16_t=short;int_least32_t=long;int_least64_t=long long;intmax_t=int;intptr_t=int *;uint8_t=unsigned char;uint16_t=unsigned short;uint32_t=unsigned int;uint64_t=unsigned long long;uint_fast8_t=unsigned char;uint_fast16_t=unsigned short;uint_fast32_t=unsigned int;uint_fast64_t=unsigned long long;uint_least8_t=unsigned char;uint_least16_t=unsigned short;uint_least32_t=unsigned int;uint_least64_t=unsigned long long;uintmax_t=unsigned int;uintptr_t=unsigned int *;_INTPTR_T_DECLARED=;_UINTPTR_T_DECLARED=;___int8_t_defined=;___int16_t_defined=;___int32_t_defined=;USE_OMP=1;WANT_FEEDBACK=1;INTERLEAVE_SIG=1</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(CYGWIN_ROOT)\usr\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\x86_64-pc-cygwin;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\bits;../Include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(CYGWIN_ROOT)\usr\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\x86_64-pc-cygwin;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\bits;../Include</NMakeIncludeSearchPath>
+    <ExecutablePath>$(PATH);</ExecutablePath>
+    <IncludePath>../Include;../Include/Lmvq;../Include/LBFL/LBGraph;../Include/LBFL;$(CYGWIN_ROOT)\usr\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\x86_64-pc-cygwin;$(CYGWIN_ROOT)\lib\gcc\x86_64-pc-cygwin\$(GCC_VERSION)\include\c++\bits</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="cygwin.makefile" />
+    <None Include="linux.makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\Alphabet.hpp" />
+    <ClInclude Include="..\Include\AlphabetHelper.hpp" />
+    <ClInclude Include="..\Include\Args.hpp" />
+    <ClInclude Include="..\Include\Array.hpp" />
+    <ClInclude Include="..\Include\Assert.hpp" />
+    <ClInclude Include="..\Include\AveragePrecision.hpp" />
+    <ClInclude Include="..\Include\BestHitDetector.hpp" />
+    <ClInclude Include="..\Include\BitSet.hpp" />
+    <ClInclude Include="..\Include\Centroid.hpp" />
+    <ClInclude Include="..\Include\CharMap.hpp" />
+    <ClInclude Include="..\Include\Console.hpp" />
+    <ClInclude Include="..\Include\CsvIO.hpp" />
+    <ClInclude Include="..\Include\db.hpp" />
+    <ClInclude Include="..\Include\Delegates.hpp" />
+    <ClInclude Include="..\Include\DiagonalGenerator.hpp" />
+    <ClInclude Include="..\Include\DiscreteDistribution.hpp" />
+    <ClInclude Include="..\Include\DistanceType.hpp" />
+    <ClInclude Include="..\Include\Distribution.hpp" />
+    <ClInclude Include="..\Include\DnaDistance.hpp" />
+    <ClInclude Include="..\Include\Domain.hpp" />
+    <ClInclude Include="..\Include\EncodedFastaSequence.hpp" />
+    <ClInclude Include="..\Include\EncodedKmer.hpp" />
+    <ClInclude Include="..\Include\EnumBase.hpp" />
+    <ClInclude Include="..\Include\Exception.hpp" />
+    <ClInclude Include="..\Include\FastaSequence.hpp" />
+    <ClInclude Include="..\Include\FileUtil.hpp" />
+    <ClInclude Include="..\Include\FragDistProcessor.hpp" />
+    <ClInclude Include="..\Include\Fragment.hpp" />
+    <ClInclude Include="..\Include\FragmentAggregationMode.hpp" />
+    <ClInclude Include="..\Include\FreeList.hpp" />
+    <ClInclude Include="..\Include\GMM1D.hpp" />
+    <ClInclude Include="..\Include\HausdorffCalculator.hpp" />
+    <ClInclude Include="..\Include\LBFL\Arg.hpp" />
+    <ClInclude Include="..\Include\LBFL\BorderLayout.hpp" />
+    <ClInclude Include="..\Include\LBFL\Box.hpp" />
+    <ClInclude Include="..\Include\LBFL\Button.hpp" />
+    <ClInclude Include="..\Include\LBFL\ComboBox.hpp" />
+    <ClInclude Include="..\Include\LBFL\DoubleWindow.hpp" />
+    <ClInclude Include="..\Include\LBFL\FlowLayout.hpp" />
+    <ClInclude Include="..\Include\LBFL\GridLayout.hpp" />
+    <ClInclude Include="..\Include\LBFL\Group.hpp" />
+    <ClInclude Include="..\Include\LBFL\GroupMemory.hpp" />
+    <ClInclude Include="..\Include\LBFL\FileChooser.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\FontSpec.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Graph.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Label.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\LineSpec.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Marker.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Point.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\ScatterPlot.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Series.hpp" />
+    <ClInclude Include="..\Include\LBFL\ActionWidget.hpp" />
+    <ClInclude Include="..\Include\LBFL\IPropertyChangedEventHandler.hpp" />
+    <ClInclude Include="..\Include\LBFL\PropertyChangedEventSource.hpp" />
+    <ClInclude Include="..\Include\LBFL\Requirement.hpp" />
+    <ClInclude Include="..\Include\LBFL\ScrollArea.hpp" />
+    <ClInclude Include="..\Include\LBFL\TextDisplay.hpp" />
+    <ClInclude Include="..\Include\LBFL\TypedArg.hpp" />
+    <ClInclude Include="..\Include\LBFL\ValueWidget.hpp" />
+    <ClInclude Include="..\Include\LBFL\VerticalFitLayout.hpp" />
+    <ClInclude Include="..\Include\Random.hpp" />
+    <ClInclude Include="..\Include\Histogram.hpp" />
+    <ClInclude Include="..\Include\Homologs.hpp" />
+    <ClInclude Include="..\Include\IArrayParser.hpp" />
+    <ClInclude Include="..\Include\Index.hpp" />
+    <ClInclude Include="..\Include\IntegerDistribution.hpp" />
+    <ClInclude Include="..\Include\KMedoids.hpp" />
+    <ClInclude Include="..\Include\Kmer.hpp" />
+    <ClInclude Include="..\Include\KmerCluster.hpp" />
+    <ClInclude Include="..\Include\KmerClusterAL.hpp" />
+    <ClInclude Include="..\Include\KmerClusterPrototype.hpp" />
+    <ClInclude Include="..\Include\KmerCodebook.hpp" />
+    <ClInclude Include="..\Include\KmerDistanceCache.hpp" />
+    <ClInclude Include="..\Include\KmerDistanceCalculator.hpp" />
+    <ClInclude Include="..\Include\KmerDistanceCalculatorDP.hpp" />
+    <ClInclude Include="..\Include\KmerDistanceCalculator_AMP.hpp" />
+    <ClInclude Include="..\Include\KmerDistanceCalculator_Projector.hpp" />
+    <ClInclude Include="..\Include\KmerDistributions.hpp" />
+    <ClInclude Include="..\Include\KmerIndex.hpp" />
+    <ClInclude Include="..\Include\KmerSequenceRanker.hpp" />
+    <ClInclude Include="..\Include\KmerSequenceRankerDP.hpp" />
+    <ClInclude Include="..\Include\KmerSequenceRanker_Params.hpp" />
+    <ClInclude Include="..\Include\KmerSequenceRanker_Projector.hpp" />
+    <ClInclude Include="..\Include\kNearestNeighbours.hpp" />
+    <ClInclude Include="..\Include\Lmvq\AbstractOptimiser.hpp" />
+    <ClInclude Include="..\Include\Lmvq\DoubleArrayExtensions.hpp" />
+    <ClInclude Include="..\Include\Lmvq\Function.hpp" />
+    <ClInclude Include="..\Include\Lmvq\Mapping.hpp" />
+    <ClInclude Include="..\Include\Lmvq\SilvaAlmeidaOptimiser.hpp" />
+    <ClInclude Include="..\Include\LookupTable.hpp" />
+    <ClInclude Include="..\Include\NormalDistribution.hpp" />
+    <ClInclude Include="..\Include\OpenHausdorff.hpp" />
+    <ClInclude Include="..\Include\PackedArray.hpp" />
+    <ClInclude Include="..\Include\ParallelMerge.hpp" />
+    <ClInclude Include="..\Include\Pointers.hpp" />
+    <ClInclude Include="..\Include\PrecisionRecallRecord.hpp" />
+    <ClInclude Include="..\Include\Projector.hpp" />
+    <ClInclude Include="..\Include\ProjectorAMP.hpp" />
+    <ClInclude Include="..\Include\ProjectorBitEmbedding.hpp" />
+    <ClInclude Include="..\Include\ProjectorSlice.hpp" />
+    <ClInclude Include="..\Include\Ranking.hpp" />
+    <ClInclude Include="..\Include\Registry.hpp" />
+    <ClInclude Include="..\Include\Selector.hpp" />
+    <ClInclude Include="..\Include\SequenceDistanceFunction.hpp" />
+    <ClInclude Include="..\Include\SequenceWrapper.hpp" />
+    <ClInclude Include="..\Include\SignatureHit.hpp" />
+    <ClInclude Include="..\Include\SignatureMatch.hpp" />
+    <ClInclude Include="..\Include\SimilarityMatrix.hpp" />
+    <ClInclude Include="..\Include\SimpleKmer.hpp" />
+    <ClInclude Include="..\Include\SparseFeatureVector.hpp" />
+    <ClInclude Include="..\Include\SparseSet.hpp" />
+    <ClInclude Include="..\Include\SparseSignature.hpp" />
+    <ClInclude Include="..\Include\String.hpp" />
+    <ClInclude Include="..\Include\TestFramework.h" />
+    <ClInclude Include="..\Include\TrecEvalRecord.hpp" />
+    <ClInclude Include="..\Include\Types.hpp" />
+    <ClInclude Include="..\Include\Util.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Axis.hpp" />
+    <ClInclude Include="AlphabetChooser.hpp" />
+    <ClInclude Include="ClusterBrowser.hpp" />
+    <ClInclude Include="ClusterTrainingSet.hpp" />
+    <ClInclude Include="DbLoader.hpp" />
+    <ClInclude Include="DefaultChartHandler.hpp" />
+    <ClInclude Include="EncodeBagOfWords.hpp" />
+    <ClInclude Include="EncodePartition.hpp" />
+    <ClInclude Include="FeatureVectorBrowser.hpp" />
+    <ClInclude Include="GetKmerDistances.hpp" />
+    <ClInclude Include="Helpers.hpp" />
+    <ClInclude Include="IncludeAll.hpp" />
+    <ClInclude Include="IRunnable.hpp" />
+    <ClInclude Include="JustBrowseRankings.hpp" />
+    <ClInclude Include="Page.hpp" />
+    <ClInclude Include="Partition.hpp" />
+    <ClInclude Include="PrecisionDistanceBrowser.hpp" />
+    <ClInclude Include="PrecisionRecallBrowser.hpp" />
+    <ClInclude Include="PrecisionRecallSummary.hpp" />
+    <ClInclude Include="RankBagOfWords.hpp" />
+    <ClInclude Include="RankingBrowser.hpp" />
+    <ClInclude Include="RankingBrowserBase.hpp" />
+    <ClInclude Include="RankingDetailBrowser.hpp" />
+    <ClInclude Include="RankSimProj.hpp" />
+    <ClInclude Include="RankSimProjIndexed.hpp" />
+    <ClInclude Include="RankTrainingSet.hpp" />
+    <ClInclude Include="ScrollingList.hpp" />
+    <ClInclude Include="SelectVocab.hpp" />
+    <ClInclude Include="SignatureBrowser.hpp" />
+    <ClInclude Include="SigRank.hpp" />
+    <ClInclude Include="StringChooser.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BowGui.cpp" />
+    <ClCompile Include="BrowseRankings.cpp" />
+    <ClCompile Include="DnaClustGui.cpp" />
+    <ClCompile Include="SimProjGui.cpp" />
+    <ClCompile Include="SimProjIndexedGui.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,30 @@
+#pragma once
+
+template<typename T>
+class Nullable {
+private: 
+	bool isNull;
+	T value;
+
+public:
+	Nullable(): isNull(true) {}
+	
+	Nullable( const T t ) : isNull( false ), value( t ) {}
+	
+	Nullable & operator = ( const Nullable & other ) = default;
+
+	bool IsNull() { return isNull; }
+
+	const T & Value() { 
+		if ( isNull ) {
+			throw Exception( "Attempt to access NULL value." );
+		}
+		return value; 
+	}
+
+	T & operator = ( T & v ) {
+		isNull = false;
+		value = v;
+		return v;
+	}
+};

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{16A76487-8B73-45DA-AA6C-FF0112B4ADBE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SignatureCommonCpp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Signature.Common.Cpp;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Signature.Common.Cpp;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Alphabet.hpp" />
+    <ClInclude Include="Args.hpp" />
+    <ClInclude Include="Assert.hpp" />
+    <ClInclude Include="AveragePrecision.hpp" />
+    <ClInclude Include="BestHitDetector.hpp" />
+    <ClInclude Include="CharMap.hpp" />
+    <ClInclude Include="Console.hpp" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="CsvIO.hpp" />
+    <ClInclude Include="Delegates.hpp" />
+    <ClInclude Include="DiagonalGenerator.hpp" />
+    <ClInclude Include="DiscreteDistribution.hpp" />
+    <ClInclude Include="DistanceType.hpp" />
+    <ClInclude Include="Distribution.hpp" />
+    <ClInclude Include="EncodedKmer.hpp" />
+    <ClInclude Include="EnumBase.hpp" />
+    <ClInclude Include="Exception.hpp" />
+    <ClInclude Include="FastaSequence.hpp" />
+    <ClInclude Include="FileUtil.hpp" />
+    <ClInclude Include="FragDistProcessor.hpp" />
+    <ClInclude Include="Fragment.hpp" />
+    <ClInclude Include="FragmentAggregationMode.hpp" />
+    <ClInclude Include="FreeList.hpp" />
+    <ClInclude Include="GMM1D.hpp" />
+    <ClInclude Include="HausdorffCalculator.hpp" />
+    <ClInclude Include="HBRandom.hpp" />
+    <ClInclude Include="Histogram.hpp" />
+    <ClInclude Include="Homologs.hpp" />
+    <ClInclude Include="IArrayParser.hpp" />
+    <ClInclude Include="IntegerDistribution.hpp" />
+    <ClInclude Include="JohnCook.h" />
+    <ClInclude Include="Kmer.hpp" />
+    <ClInclude Include="KmerClusterAL.hpp" />
+    <ClInclude Include="KmerCodebook.hpp" />
+    <ClInclude Include="KmerDistanceCache.hpp" />
+    <ClInclude Include="KmerDistanceCalculator.hpp" />
+    <ClInclude Include="KmerDistanceCalculator_AMP.hpp" />
+    <ClInclude Include="KmerDistanceCalculator_Projector.hpp" />
+    <ClInclude Include="KmerDistributions.hpp" />
+    <ClInclude Include="KmerSequenceRanker.hpp" />
+    <ClInclude Include="KmerSequenceRanker_Params.hpp" />
+    <ClInclude Include="KmerSequenceRanker_Projector.hpp" />
+    <ClInclude Include="NormalDistribution.hpp" />
+    <ClInclude Include="Nullable.hpp.obsolete" />
+    <ClInclude Include="OpenHausdorff.hpp" />
+    <ClInclude Include="ParallelMerge.hpp" />
+    <ClInclude Include="PointerList.hpp" />
+    <ClInclude Include="LookupTable.hpp" />
+    <ClInclude Include="PrecisionRecallRecord.hpp" />
+    <ClInclude Include="Projector.hpp" />
+    <ClInclude Include="ProjectorAMP.hpp" />
+    <ClInclude Include="ProjectorBitEmbedding.hpp" />
+    <ClInclude Include="ProjectorSlice.hpp" />
+    <ClInclude Include="QutBio.h" />
+    <ClInclude Include="Ranking.hpp" />
+    <ClInclude Include="Selector.hpp" />
+    <ClInclude Include="SequenceDistanceFunction.hpp" />
+    <ClInclude Include="Signature.hpp" />
+    <ClInclude Include="SignatureHit.hpp" />
+    <ClInclude Include="SignatureMatch.hpp" />
+    <ClInclude Include="SimilarityMatrix.hpp" />
+    <ClInclude Include="String.hpp" />
+    <ClInclude Include="TestFramework.h" />
+    <ClInclude Include="Array.hpp" />
+    <ClInclude Include="TrecEvalRecord.hpp" />
+    <ClInclude Include="Types.hpp" />
+    <ClInclude Include="Util.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Update-all-h.bash" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UnitTests.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,419 @@
+#pragma once
+
+// Trick Visual studio.
+#if __cplusplus < 201103L
+#undef __cplusplus
+#define __cplusplus 201103L
+#endif
+
+#pragma warning ( disable: 4389 )
+
+#include <fstream>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <cstdint>
+
+// #include "Exception.hpp"
+#include "CsvIO.hpp"
+#include "Util.hpp"
+
+#define DEBUG_PATTERN
+
+using namespace QutBio;
+
+namespace QutBio {
+	class Signature {
+	private: string gi;
+	private: size_t patternLength;
+	private: size_t fragmentLength;
+	private: size_t interval;
+	private: size_t fragmentIndex;
+	private: size_t fragmentCount;
+	private: string classLabel;
+	private: string subsequence;
+	private: vector<uint32_t> pattern;
+
+	public: string GI() { return gi; }
+
+	private: void GI( string & value ) { gi = value; }
+
+			 /// <summary> Get an array of int (with entries restricted to be 0 or 1) 
+			 ///		containing the pattern contents.
+			 /// </summary>
+			 /// <exception cref="Exception">
+			 ///		Throws if value == null || value.Length != patternLength
+			 /// </exception>
+
+	public: vector<int> Pattern() {
+		vector<int> result;
+		int shift = 31;
+
+		for ( size_t i = 0; i < patternLength; i++ ) {
+			uint32_t mask = 1 << shift;
+
+			result.push_back( ( pattern[i / 32] & mask ) >> shift );
+
+			shift--;
+
+			if ( shift < 0 ) {
+				shift = 31;
+			}
+		}
+
+		return result;
+	}
+
+			/// <summary>  (or privately set) the pattern contents.
+			/// </summary>
+			/// <exception cref="Exception">
+			///		Throws if value == null || value.Length != patternLength
+			/// </exception>
+
+	private: void SetPattern( vector<int> & value ) {
+		if ( value.size() != patternLength ) {
+			throw Exception( "Signature pattern length must equal the patternLength field.", __FILE__, __LINE__ );
+		}
+
+		uint32_t accumulator = 0;
+		pattern.clear();
+
+		for ( size_t i = 0; i < patternLength; i++ ) {
+			accumulator <<= 1;
+			accumulator |= value[i];
+
+			if ( i % 32 == 31 ) {
+				pattern.push_back( accumulator );
+				accumulator = 0;
+			}
+		}
+
+#ifdef DEBUG_PATTERN
+		vector<int> reconstituted = Pattern();
+
+		if ( reconstituted != value ) {
+			throw Exception( "Signature does not survive a round trip through this object.", __FILE__, __LINE__ );
+		}
+#endif
+	}
+
+	public: ~Signature() {}
+
+	public: int SignatureLength() { return patternLength; }
+
+	private: void SignatureLength( size_t value ) {
+		if ( value == patternLength ) return;
+		if ( value % 32 != 0 ) throw Exception( "signature pattern must be a multiple of 32 bits in length.", __FILE__, __LINE__ );
+
+		patternLength = value;
+		pattern.clear();
+	}
+
+	public: int FragmentLength() { return fragmentLength; }
+
+	private: void FragmentLength( int value ) {
+		if ( value <= 0 ) throw new Exception( "value must be strictly positive.", __FILE__, __LINE__ );
+
+		fragmentLength = value;
+	}
+
+	public: int Interval() { return interval; }
+
+	private: void Interval( int value ) {
+		if ( value <= 0 ) throw new Exception( "value must be positive", __FILE__, __LINE__ );
+
+		interval = value;
+	}
+
+	public: int FragmentIndex() {
+		return fragmentIndex;
+	}
+
+	private: void FragmentIndex( size_t value ) {
+		if ( value >= fragmentCount ) throw new Exception( "value must be less than fragmentCount", __FILE__, __LINE__ );
+
+		fragmentIndex = value;
+	}
+
+	public: int FragmentCount() { return fragmentCount; }
+
+	private: void FragmentCount( int value ) {
+		if ( value < 0 ) throw new Exception( "value may not be negative", __FILE__, __LINE__ );
+
+		fragmentCount = value;
+	}
+
+			 /// <summary>  or set the subsequence from which this pattern was generated.
+			 /// </summary>
+
+	public: string & Subsequence() {
+		return subsequence;
+	}
+
+	private: void Subsequence( string & value ) {
+		if ( value.length() > (unsigned int) fragmentLength ) throw new Exception( "subsequence may not be longer than fragment length", __FILE__, __LINE__ );
+
+		subsequence = value;
+	}
+
+	public: string & ClassLabel() { return classLabel; }
+
+	private: void  ClassLabel( string & value ) { classLabel = value; }
+
+			 /// <summary> Initialises a pattern by parsing the fields from a string array as would be 
+			 ///		obtained by scanning records from a CSV document.
+			 /// </summary>
+			 /// <param name="parts">
+			 ///		The array of field text values. This array shound present the data in the same order 
+			 ///		as it is produced by ToStringArray().
+			 /// </param>
+
+	public: Signature( vector<string> & parts ) {
+		int patternLength = Int::Parse( parts[5] );
+		vector<int> pattern( patternLength );
+		ParseSignature( parts[8], patternLength, pattern );
+
+		GI( parts[0] );
+		FragmentCount( Int::Parse( parts[2] ) );
+		FragmentIndex( Int::Parse( parts[1] ) );
+		SignatureLength( patternLength );
+		FragmentLength( Int::Parse( parts[3] ) );
+		Interval( Int::Parse( parts[4] ) );
+		ClassLabel( parts[6] );
+		Subsequence( parts[7] );
+		SetPattern( pattern );
+	}
+
+			/// <summary> Parses a signature pattern from a string of binary digits into an array of int.
+			/// </summary>
+			/// <param name="s">
+			///		A string containing the binary digits. 
+			///		<para>
+			///			PRE: <code>s.length() &gt;= patternLength</code>.
+			///		</para>
+			/// </param>
+			/// <param name="patternLength">
+			///		The number of bits in the signature.
+			///		<para>
+			///			PRE: <code>patternLength &gt; 0</code>;
+			///		</para>
+			/// </param>
+			/// <param name="result">
+			///		A vector of int which will be overwritten with the contents of the pattern.
+			///	<para>
+			///		PRE: <code>result.size() &gt;= patternLength</code>.
+			///	</para>
+			/// </param>
+
+	private: void ParseSignature( string & s, int patternLength, vector<int> & result ) {
+		for ( int i = 0; i < patternLength; i++ ) {
+			result[i] = s[i] == '1' ? 1 : 0;
+		}
+	}
+
+			 /// <summary> Initialises a pattern with explicitly defined values.
+			 /// </summary>
+			 /// <param name="gi"></param>
+			 /// <param name="fragmentIndex"></param>
+			 /// <param name="fragmentCount"></param>
+			 /// <param name="patternLength"></param>
+			 /// <param name="fragmentLength"></param>
+			 /// <param name="interval"></param>
+			 /// <param name="subsequence"></param>
+			 /// <param name="pattern"></param>
+
+	public: Signature(
+		string & gi,
+		int fragmentIndex,
+		int fragmentCount,
+		int patternLength,
+		int fragmentLength,
+		int interval,
+		string & classLabel,
+		string & subsequence,
+		vector<int> & pattern
+	) {
+		GI( gi );
+		FragmentCount( fragmentCount );
+		FragmentIndex( fragmentIndex );
+		SignatureLength( patternLength );
+		FragmentLength( fragmentLength );
+		Interval( interval );
+		ClassLabel( classLabel );
+		Subsequence( subsequence );
+		SetPattern( pattern );
+	}
+
+	private: static void ConstructorImpl(
+		Signature * obj,
+		string & gi,
+		int fragmentIndex,
+		int fragmentCount,
+		int patternLength,
+		int fragmentLength,
+		int interval,
+		string & classLabel,
+		string & subsequence,
+		vector<int> & pattern
+	) {
+		obj->GI( gi );
+		obj->FragmentCount( fragmentCount );
+		obj->FragmentIndex( fragmentIndex );
+		obj->SignatureLength( patternLength );
+		obj->FragmentLength( fragmentLength );
+		obj->Interval( interval );
+		obj->ClassLabel( classLabel );
+		obj->Subsequence( subsequence );
+		obj->SetPattern( pattern );
+	}
+
+	public: static vector<string> Headings() {
+		string fields[] = {
+			"Gi",
+			"FragmentIndex",
+			"FragmentCount",
+			"FragmentLength",
+			"Interval",
+			"SignatureLength",
+			"ClassLabel",
+			"Subsequence",
+			"Signature"
+		};
+		vector<string> s( fields, fields + 9 );
+		return s;
+	}
+
+	public: vector<string> ToStringArray() {
+		static string delimiter( "" );
+
+		vector<int> pattern = Pattern();
+
+		return vector<string>( {
+			gi,
+			Int::ToString( fragmentIndex ),
+			Int::ToString( fragmentCount ),
+			Int::ToString( fragmentLength ),
+			Int::ToString( interval ),
+			Int::ToString( patternLength ),
+			classLabel,
+			subsequence,
+			Int::Join( pattern, delimiter )
+			} );
+	}
+
+			// http://stackoverflow.com/questions/109023/how-to-count-the-number-of-set-bits-in-a-32-bit-integer
+
+	private: static int NumberOfSetBits( uint32_t i ) {
+		i = i - ( ( i >> 1 ) & 0x55555555 );
+		i = ( i & 0x33333333 ) + ( ( i >> 2 ) & 0x33333333 );
+		return ( ( ( i + ( i >> 4 ) ) & 0x0F0F0F0F ) * 0x01010101 ) >> 24;
+	}
+
+			 /// <summary> Returns the similarity between this Signature and another.
+			 /// <para>
+			 ///		similarity is 1 - hammingdistance(this,other) / SignatureLength.
+			 /// </para>
+			 /// </summary>
+			 /// <param name="other"></param>
+			 /// <returns></returns>
+
+	public: double Similarity( Signature & other ) {
+		int identities = 0;
+		const uint32_t * pattern = this->pattern.data();
+		const uint32_t * otherPattern = other.pattern.data();
+
+		for ( size_t i = 0; i < patternLength / 32; i++ ) {
+			uint32_t x = pattern[i];
+			uint32_t y = otherPattern[i];
+			uint32_t commonBits = ( x & y ) | ( ( ~x ) & ( ~y ) );
+			identities += NumberOfSetBits( commonBits );
+		}
+
+		// cerr << "identities = "<< identities << endl;
+
+		return (double) identities / patternLength;
+	}
+
+			/// <summary> Returns the Hamming distance between this Signature and another.
+			/// </summary>
+			/// <param name="other"></param>
+			/// <returns></returns>
+
+	public: int HammingDistance( Signature & other ) {
+		int identities = 0;
+		const uint32_t * pattern = this->pattern.data();
+		const uint32_t * otherPattern = other.pattern.data();
+
+		for ( size_t i = 0; i < patternLength / 32; i++ ) {
+			uint32_t intersection = pattern[i] & otherPattern[i];
+			identities += NumberOfSetBits( intersection );
+		}
+
+		return patternLength - identities;
+	}
+
+			/// <summary> Useful as a component of a k-nearest neighbour search.
+			/// <para>
+			///		Inserts the mutant item into a list of (Signature, similarity) pairs.
+			/// </para>
+			/// </summary>
+			/// <param name="mutant">
+			///		The pattern against which this item is to be compared.
+			/// </param>
+			/// <param name="k">
+			///		The number of elements desired in the array.
+			/// </param>
+			/// <param name="neighbours">
+			///		The collection of nearest neighbours.
+			/// </param>
+
+			//public: void InsertIfMoreSimilar(
+			//	Signature mutant,
+			//	int k,
+			//	Pair<Signature, double>[] neighbours
+			//	) {
+			//			double similarity = Similarity( mutant );
+			//			Pair<Signature, double> tuple = null;
+
+			//			for ( int i = k - 1; i >= 0; i-- ) {
+			//				Pair<Signature, double> t = neighbours[i];
+
+			//				if ( t == null || t.Value < similarity ) {
+			//					if ( tuple == null ) tuple = new Pair<Signature, double>( mutant, similarity );
+
+			//					neighbours[i] = tuple;
+
+			//					if ( i < k - 1 ) {
+			//						neighbours[i + 1] = t;
+			//					}
+			//				}
+			//			}
+			//}
+
+	public: static void ReadSignatures(
+		string patternFileName,
+		int observations,
+		unordered_map<string, vector<Signature>> & result
+	) {
+		ifstream reader( patternFileName );
+		CsvReader csv( reader );
+		vector<vector<string>> records;
+
+		csv.Read( records, observations );
+
+		for ( auto i = records.begin(); i != records.end(); i++ ) {
+			vector<string> &record( *i );
+
+			static string gi( "GI" );
+
+			if ( String::ToLowerCase( record[0] ) == String::ToLowerCase( gi ) ) continue;
+
+			if ( record.size() < 9 ) continue;
+
+			Signature sig( record );
+			result[sig.GI()].push_back( sig );
+		}
+	}
+	};
+}
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>UnitTests.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerAmpDefaultAccelerator>
+    </LocalDebuggerAmpDefaultAccelerator>
+    <LocalDebuggerCommandArguments>--dbFileName "m:/swissprot/100000/swissprot_100000.faa" --clusterFileName "m:/swissprot/100000/100000.incremental.5.clusters/swissprot_100000.incremental.5.codebook"</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommand>A:\cygwin64\bin\gdb.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <LocalDebuggerAmpDefaultAccelerator>
+    </LocalDebuggerAmpDefaultAccelerator>
+    <LocalDebuggerCommandArguments>-tui DnaClustGui.exe</LocalDebuggerCommandArguments>
+    <LocalDebuggerMergeEnvironment>false</LocalDebuggerMergeEnvironment>
+    <RemoteDebuggerCommand>a:\cygwin64\bin\gdb.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerCommandArguments> -tui -tty /dev/pty2 ./DnaClustGuiDB</RemoteDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+</Project>

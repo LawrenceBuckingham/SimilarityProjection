@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8096C561-AB22-4713-95DE-989C507DC43A}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>KmerRank</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>make </NMakeBuildCommandLine>
+    <NMakeOutput>KmerRank.exe</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make rebuild</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_HAVE_STDC;__CYGWIN__=;__x86_64__=;__extension__=;__asm__(x)=;_cdecl=;__cdecl=;__inline__=inline;_SYMSTR(x)=_ ## x;__timezonefunc__;__attribute__(x)=;__GNUC_VA_LIST;__gnuc_va_list=va_list;__va_list__=;va_list=void *;__builtin_va_list=void *;__INTPTR_TYPE__=int *;__int16_t=short;__int32_t=int;__int64_t=long;int64_t=long;__uint16_t=unsigned short;__uint32_t=unsigned;__uint64_t=unsigned long;__INT32_TYPE__=int;__intptr_t=int *;__uintptr_t=unsigned *;_SYS__INTSUP_H=;_STDINT_H=;_MACHINE__DEFAULT_TYPES_H=;__SIZE_TYPE__=unsigned long long;__PTRDIFF_TYPE__=long long;_INTMAX_T_DECLARED=;_UINTMAX_T_DECLARED=;int8_t=signed char;int16_t=short;int32_t=long;int64_t=long long;int_fast8_t=char;int_fast16_t=short;int_fast32_t=long;int_fast64_t=long long;int_least8_t=char;int_least16_t=short;int_least32_t=long;int_least64_t=long long;intmax_t=int;intptr_t=int *;uint8_t=unsigned char;uint16_t=unsigned short;uint32_t=unsigned int;uint64_t=unsigned long long;uint_fast8_t=unsigned char;uint_fast16_t=unsigned short;uint_fast32_t=unsigned int;uint_fast64_t=unsigned long long;uint_least8_t=unsigned char;uint_least16_t=unsigned short;uint_least32_t=unsigned int;uint_least64_t=unsigned long long;uintmax_t=unsigned int;uintptr_t=unsigned int *;_INTPTR_T_DECLARED=;_UINTPTR_T_DECLARED=</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/x86_64-pc-cygwin;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/backward;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include;$(CYGWIN_ROOT)/usr/local/include;$(CYGWIN_ROOT)/usr/include;$(CYGWIN_ROOT)/usr/include/w32api;..\packages\PngWriter;..\Signature.Common.Cpp;</NMakeIncludeSearchPath>
+    <ExecutablePath>$(PATH);</ExecutablePath>
+    <IncludePath>$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/x86_64-pc-cygwin;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/backward;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include;$(CYGWIN_ROOT)/usr/local/include;$(CYGWIN_ROOT)/usr/include;$(CYGWIN_ROOT)/usr/include/w32api;..\packages\PngWriter;..\Signature.Common.Cpp</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>make -f cygwin.makefile </NMakeBuildCommandLine>
+    <NMakeOutput>KmerRank.exe</NMakeOutput>
+    <NMakeCleanCommandLine>make -f cygwin.makefile clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make -f cygwin.makefile rebuild</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>POPCOUNT=__builtin_popcountll;TEST_DNA;TEST_PACKED_ARRAY;_HAVE_STDC;__cplusplus=201103L;__CYGWIN__=;__x86_64__=;__extension__=;__asm__(x)=;_cdecl=;__cdecl=;__inline__=inline;_SYMSTR(x)=_ ## x;__timezonefunc__;__attribute__(x)=;__GNUC_VA_LIST;__gnuc_va_list=va_list;__va_list__=;va_list=void *;__builtin_va_list=void *;__INTPTR_TYPE__=int *;int8_t=char;int16_t=short;int32_t=int;int64_t=long long;__int16_t=short;__int32_t=int;__int64_t=long;int64_t=long;__uint16_t=unsigned short;__uint32_t=unsigned;__uint64_t=unsigned long;__INT32_TYPE__=int;__intptr_t=int *;__uintptr_t=unsigned *;_SYS__INTSUP_H=;_STDINT_H=;_MACHINE__DEFAULT_TYPES_H=;__SIZE_TYPE__=unsigned long long;__PTRDIFF_TYPE__=long long;_INTMAX_T_DECLARED=;_UINTMAX_T_DECLARED=;int32_t=long;int_fast8_t=char;int_fast16_t=short;int_fast32_t=long;int_fast64_t=long long;int_least8_t=char;int_least16_t=short;int_least32_t=long;int_least64_t=long long;intmax_t=int;intptr_t=int *;uint8_t=unsigned char;uint16_t=unsigned short;uint32_t=unsigned int;uint64_t=unsigned long long;uint_fast8_t=unsigned char;uint_fast16_t=unsigned short;uint_fast32_t=unsigned int;uint_fast64_t=unsigned long long;uint_least8_t=unsigned char;uint_least16_t=unsigned short;uint_least32_t=unsigned int;uint_least64_t=unsigned long long;uintmax_t=unsigned int;uintptr_t=unsigned int *;_INTPTR_T_DECLARED=;_UINTPTR_T_DECLARED=;___int8_t_defined=;___int16_t_defined=;___int32_t_defined=</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/x86_64-pc-cygwin;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/backward;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include;$(CYGWIN_ROOT)/usr/local/include;$(CYGWIN_ROOT)/usr/include;$(CYGWIN_ROOT)/usr/include/w32api;../Signature.Common.Cpp</NMakeIncludeSearchPath>
+    <ExecutablePath>$(PATH);</ExecutablePath>
+    <IncludePath>$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/x86_64-pc-cygwin;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include/c++/backward;$(CYGWIN_ROOT)/lib/gcc/x86_64-pc-cygwin/$(GCC_VERSION)/include;$(CYGWIN_ROOT)/usr/local/include;$(CYGWIN_ROOT)/usr/include;$(CYGWIN_ROOT)/usr/include/w32api;..\packages\PngWriter;..\Signature.Common.Cpp</IncludePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="001.01-run-blast-full-dataset.bash" />
+    <None Include="002.00-get-blast-rankings.bash" />
+    <None Include="cpp.hint" />
+    <None Include="cygwin.makefile" />
+    <None Include="linux.makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Signature.Common.Cpp\AllocatedKmer.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Alphabet.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\AlphabetHelper.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Args.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Array.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Assert.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\AveragePrecision.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\BestHitDetector.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\BitSet.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\CharMap.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Console.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\CovTree.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\CsvIO.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\db.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Delegates.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\DiagonalGenerator.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\DiscreteDistribution.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\DistanceType.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Distribution.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\DnaDistance.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Edge.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\EncodedFastaSequence.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\EncodedKmer.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\EnumBase.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Exception.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\FastaSequence.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\FileUtil.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\FragDistProcessor.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Fragment.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\FragmentAggregationMode.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\FreeList.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\GMM1D.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\HausdorffCalculator.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\HBRandom.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Histogram.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Homologs.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\IArrayParser.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Index.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\IntegerDistribution.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\IsslKmerIndex.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Kmer.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerCluster.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerClusterAL.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerClusterPrototype.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerCodebook.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCache.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculatorDP.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator_AMP.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator_Projector.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistributions.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerIndex.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRankerDP.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker_Params.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker_Projector.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\kNearestNeighbours.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\LineReader.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\AbstractOptimiser.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\DoubleArrayExtensions.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\Function.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\Mapping.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\SilvaAlmeidaOptimiser.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\LookupTable.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\NormalDistribution.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\OpenHausdorff.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\PackedArray.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\ParallelMerge.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\PrecisionRecallRecord.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Projector.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorAMP.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorBitEmbedding.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorSlice.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Ranking.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Registry.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Selector.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Sequence.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SequenceDistanceFunction.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Signature.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SignatureHit.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SignatureMatch.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SimilarityMatrix.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Simproj.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SparseSignature.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\String.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\SubstitutionMatrix.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Substring.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\TrecEvalRecord.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Types.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Util.hpp" />
+    <ClInclude Include="KmerRank.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AAClust.cpp" />
+    <ClCompile Include="AAClustCountIndices.cpp" />
+    <ClCompile Include="AAClusterFirst.cpp" />
+    <ClCompile Include="AAClustGetRandomPrototypes.cpp" />
+    <ClCompile Include="AAClustRecluster.cpp" />
+    <ClCompile Include="AAClustSig.cpp" />
+    <ClCompile Include="AAClustSigEncode.cpp" />
+    <ClCompile Include="AACovTree.cpp" />
+    <ClCompile Include="AAD2.cpp" />
+    <ClCompile Include="AAD2NoIndex.cpp" />
+    <ClCompile Include="AASP.cpp" />
+    <ClCompile Include="GetRandomSubsetFasta.cpp" />
+    <ClCompile Include="KmerRank.cpp" />
+    <ClCompile Include="SimProjDP.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

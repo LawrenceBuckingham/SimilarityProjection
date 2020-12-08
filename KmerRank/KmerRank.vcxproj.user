@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>--maxRecords 1000 --seed 5189895 --numThreads 7 --queryFile m:/swissprot/swissprot_genes.faa --dbFile m:/swissprot/swissprot_genes.faa --rankingFile a:/temp/rankings-v2.csv --codebookFile m:/swissprot/Codebook/swissprot_codebook_c100000_k30.csv --kmerLength 30 --fragLength 1 --skip 1 --kmerMode BestOfBest --fragMode HausdorffAverageAverage --thresholdDistance 305 --defaultDistance 325 --alphabet AA --dist BlosumSimilarity --matrix 62 --idIndex 2 --classIndex 3 --sampleSize 100
+</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerAmpDefaultAccelerator>
+    </LocalDebuggerAmpDefaultAccelerator>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments>--maxRecords 1000 --seed 5189895 --numThreads 7 --queryFile m:/swissprot/swissprot_genes.faa --dbFile m:/swissprot/swissprot_genes.faa --rankingFile a:/temp/rankings-v2.csv --codebookFile m:/swissprot/Codebook/swissprot_codebook_c100000_k30.csv --kmerLength 30 --fragLength 1 --skip 1 --kmerMode BestOfBest --fragMode HausdorffAverageAverage --thresholdDistance 305 --defaultDistance 325 --alphabet AA --dist BlosumSimilarity --matrix 62 --idIndex 2 --classIndex 3 --sampleSize 100
+</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerAmpDefaultAccelerator>
+    </LocalDebuggerAmpDefaultAccelerator>
+    <LocalDebuggerMergeEnvironment>false</LocalDebuggerMergeEnvironment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="BootstrapColumnAverage.cpp" />
+    <ClCompile Include="ComputeDistanceMatrix.cpp" />
+    <ClCompile Include="ComputeGoodnessOfFit.cpp" />
+    <ClCompile Include="DomainKMedoids.cpp" />
+    <ClCompile Include="ExtractDomainSubsequences.cpp" />
+    <ClCompile Include="GetCodebookSubset.cpp" />
+    <ClCompile Include="GetDnaHammingDistribution.cpp" />
+    <ClCompile Include="GetCdfInverse.cpp" />
+    <ClCompile Include="GetDomainCoverage.cpp" />
+    <ClCompile Include="GetDomainSubset.cpp" />
+    <ClCompile Include="GetLargestProtosByClass.cpp" />
+    <ClCompile Include="ImportSwissprotDomains.cpp" />
+    <ClCompile Include="KmerKMedoids.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SelectProtosMinHash.cpp" />
+    <ClCompile Include="SplitFastaHomologs.cpp" />
+    <ClCompile Include="trec_eval_precision_at.cpp" />
+    <ClCompile Include="trec_eval_tc.cpp" />
+    <ClCompile Include="trec_eval_tc_compact.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EvalGmm.hpp" />
+    <ClInclude Include="GetGmmStats.hpp" />
+    <ClInclude Include="GetKmerDistanceDistributions.hpp" />
+    <ClInclude Include="GetKmerDistanceSample.hpp" />
+    <ClInclude Include="GetKmerNNDistributions.hpp" />
+    <ClInclude Include="GetKmerNNHomologDistributions.hpp" />
+    <ClInclude Include="GetKmerTheoreticalDistanceDistributions.cpp" />
+    <ClInclude Include="GetPairwiseSimilarityProfiles.hpp" />
+    <ClInclude Include="Main.hpp" />
+    <ClInclude Include="PlotMixtureModel.hpp" />
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\AbstractOptimiser.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Alphabet.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\AlphabetHelper.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Args.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Array.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Assert.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\AveragePrecision.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\BestHitDetector.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\CharMap.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Console.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\CsvIO.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\db.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\DataLoader.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Delegates.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\DiagonalGenerator.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\DiscreteDistribution.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\DistanceType.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Distribution.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Domain.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\DoubleArrayExtensions.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\EnumBase.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\EncodedKmer.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\EncodedFastaSequence.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Exception.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\FastaSequence.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\FileUtil.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Fragment.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\FragDistProcessor.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\FragmentAggregationMode.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\FreeList.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\Function.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\GMM1D.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\HausdorffCalculator.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\HBRandom.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Histogram.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\IntegerDistribution.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\IArrayParser.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Homologs.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerIndex.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator_Projector.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator_AMP.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCalculator.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistanceCache.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerCodebook.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerClusterPrototype.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerClusterAL.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerCluster.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Kmer.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KMedoids.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerDistributions.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\kNearestNeighbours.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker_Projector.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker_Params.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\KmerSequenceRanker.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Ranking.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\QutBio.h">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorSlice.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorBitEmbedding.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\ProjectorAMP.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Projector.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\PrecisionRecallRecord.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\PointerList.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\ParallelMerge.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\OpenHausdorff.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\NormalDistribution.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\LookupTable.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Selector.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\Mapping.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SequenceDistanceFunction.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SequenceWrapper.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Signature.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\TrecEvalRecord.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Types.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Substring.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SubstitutionMatrix.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\String.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SimilarityMatrix.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Util.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\Lmvq\SilvaAlmeidaOptimiser.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\WeibullDistribution.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SignatureMatch.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Signature.Common.Cpp\SignatureHit.hpp">
+      <Filter>QutBio</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cygwin.makefile" />
+    <None Include="linux.makefile" />
+    <None Include="..\Signature.Common.Cpp\Update-all-h.bash">
+      <Filter>QutBio</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="QutBio">
+      <UniqueIdentifier>{f658a5d9-ab84-4538-b431-d29fd872a4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lmvq">
+      <UniqueIdentifier>{bea402f3-6b49-41a0-84d4-31c7c9049e3b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

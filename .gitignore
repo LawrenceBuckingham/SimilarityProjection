@@ -3,3 +3,17 @@
 ################################################################################
 
 /.vs
+/AdHocCpp/.vscode
+/AdHocCpp/bin
+/AdHocCpp/Debug
+/AdHocCpp/Release
+/AdHocCpp/Results/EmbedBlosum
+/AdHocCpp/x64
+/bin
+/Gui/bin
+/Gui/x64/Release
+/Include/Resources
+/KmerRank/bin
+/KmerRank/x64/Release
+/Utilities/bin
+/Utilities/x64/Release

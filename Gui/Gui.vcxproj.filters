@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\Include\Lmvq\AbstractOptimiser.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Lmvq\Function.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Lmvq\Mapping.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Lmvq\SilvaAlmeidaOptimiser.hpp">
+      <Filter>Lmvq</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Alphabet.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\AlphabetHelper.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Args.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Array.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Assert.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\AveragePrecision.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\BestHitDetector.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\BitSet.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\CharMap.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Console.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\CsvIO.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\db.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Delegates.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\DiagonalGenerator.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\DiscreteDistribution.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\DistanceType.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Distribution.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Lmvq\DoubleArrayExtensions.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\EncodedKmer.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\EnumBase.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Exception.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FastaSequence.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FileUtil.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FragDistProcessor.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Fragment.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FragmentAggregationMode.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FreeList.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GMM1D.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\HausdorffCalculator.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Random.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Histogram.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Homologs.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\IArrayParser.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\IntegerDistribution.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Kmer.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerClusterAL.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerCodebook.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistanceCache.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistanceCalculator.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistanceCalculator_AMP.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistanceCalculator_Projector.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistributions.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerSequenceRanker.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerSequenceRanker_Params.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerSequenceRanker_Projector.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\kNearestNeighbours.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LookupTable.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NormalDistribution.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\OpenHausdorff.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\PackedArray.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\ParallelMerge.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\PrecisionRecallRecord.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Projector.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\ProjectorAMP.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\ProjectorBitEmbedding.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\ProjectorSlice.hpp">
+      <Filter>QutBio\N-Q</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Ranking.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Selector.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SequenceDistanceFunction.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SignatureHit.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SignatureMatch.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SimilarityMatrix.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\String.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\TestFramework.h">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\TrecEvalRecord.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Types.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Util.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Domain.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SequenceWrapper.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\DnaDistance.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\EncodedFastaSequence.hpp">
+      <Filter>QutBio\D-F</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerClusterPrototype.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KMedoids.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerCluster.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerDistanceCalculatorDP.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerIndex.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\KmerSequenceRankerDP.hpp">
+      <Filter>QutBio\K-M</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\GroupMemory.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\FileChooser.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\Arg.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\TypedArg.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\TextDisplay.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\Requirement.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\BorderLayout.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\GridLayout.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="GetKmerDistances.hpp" />
+    <ClInclude Include="IncludeAll.hpp" />
+    <ClInclude Include="DbLoader.hpp" />
+    <ClInclude Include="IRunnable.hpp" />
+    <ClInclude Include="AlphabetChooser.hpp" />
+    <ClInclude Include="Page.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\FontSpec.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\Graph.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\Label.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\LineSpec.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\Marker.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\Point.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\ScatterPlot.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\LBGraph\Series.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusterTrainingSet.hpp" />
+    <ClInclude Include="Partition.hpp" />
+    <ClInclude Include="..\Include\SimpleKmer.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Centroid.hpp">
+      <Filter>QutBio\A-C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\IPropertyChangedEventHandler.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\PropertyChangedEventSource.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Index.hpp">
+      <Filter>QutBio\G-J</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusterBrowser.hpp" />
+    <ClInclude Include="..\Include\LBFL\DoubleWindow.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectVocab.hpp" />
+    <ClInclude Include="..\Include\LBFL\Button.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.hpp" />
+    <ClInclude Include="EncodePartition.hpp" />
+    <ClInclude Include="..\Include\LBFL\Group.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\FlowLayout.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SparseSignature.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="SignatureBrowser.hpp" />
+    <ClInclude Include="..\Include\LBFL\ScrollArea.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\ActionWidget.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="RankTrainingSet.hpp" />
+    <ClInclude Include="..\Include\Registry.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SparseSet.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="RankingBrowser.hpp" />
+    <ClInclude Include="..\Include\LBFL\Box.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\ValueWidget.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\LBFL\VerticalFitLayout.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="PrecisionRecallBrowser.hpp" />
+    <ClInclude Include="PrecisionDistanceBrowser.hpp" />
+    <ClInclude Include="RankingBrowserBase.hpp" />
+    <ClInclude Include="RankingDetailBrowser.hpp" />
+    <ClInclude Include="ScrollingList.hpp" />
+    <ClInclude Include="SigRank.hpp" />
+    <ClInclude Include="PrecisionRecallSummary.hpp" />
+    <ClInclude Include="..\Include\Pointers.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SparseFeatureVector.hpp">
+      <Filter>QutBio\R-Z</Filter>
+    </ClInclude>
+    <ClInclude Include="EncodeBagOfWords.hpp" />
+    <ClInclude Include="FeatureVectorBrowser.hpp" />
+    <ClInclude Include="RankBagOfWords.hpp" />
+    <ClInclude Include="..\Include\LBFL\ComboBox.hpp">
+      <Filter>LBFL</Filter>
+    </ClInclude>
+    <ClInclude Include="JustBrowseRankings.hpp" />
+    <ClInclude Include="DefaultChartHandler.hpp" />
+    <ClInclude Include="RankSimProj.hpp" />
+    <ClInclude Include="StringChooser.hpp" />
+    <ClInclude Include="RankSimProjIndexed.hpp" />
+    <ClInclude Include="..\Include\LBFL\LBGraph\Axis.hpp">
+      <Filter>LBFL\LBGraph</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="linux.makefile" />
+    <None Include="cygwin.makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="QutBio">
+      <UniqueIdentifier>{019a331c-e69b-4db2-b81b-2a1789aece7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lmvq">
+      <UniqueIdentifier>{b0ba0dad-2251-40c0-a023-30b0c95ca179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\A-C">
+      <UniqueIdentifier>{51809da2-70aa-43a8-92b6-03c57532106e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\D-F">
+      <UniqueIdentifier>{6bc08b2d-2cea-42b7-83d3-b26bc361bdb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\K-M">
+      <UniqueIdentifier>{48eef62b-93ca-4e23-8e3a-d5485d0e129c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\R-Z">
+      <UniqueIdentifier>{fff01f26-36d9-4962-a235-86416f3ab440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\N-Q">
+      <UniqueIdentifier>{13732478-1c31-47e9-adca-dd0b2775b4f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QutBio\G-J">
+      <UniqueIdentifier>{fef75292-804a-4b5e-96cf-65df610b4b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LBFL">
+      <UniqueIdentifier>{13775ab5-fe1d-4865-8789-2195f6cb158b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LBFL\LBGraph">
+      <UniqueIdentifier>{6415a39e-de2a-4687-be0e-e03b937d910a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DnaClustGui.cpp" />
+    <ClCompile Include="BowGui.cpp" />
+    <ClCompile Include="BrowseRankings.cpp" />
+    <ClCompile Include="SimProjGui.cpp" />
+    <ClCompile Include="SimProjIndexedGui.cpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+	<meta name="GENERATOR" content="Microsoft Visual Studio">
+	<title></title>
+	<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "Cambria","serif";
+			color: #365F91;
+		}
+
+		.clickable {
+			cursor: pointer;
+		}
+
+		.hideable {
+			display: none; /* */
+		}
+
+		.section {
+			margin-left: 0.5in;
+		}
+	</style>
+	<script src="Scripts/ssloader.js"></script>
+	<script src="Scripts/ss.js"></script>
+	<script src="Scripts/GeneFamilyStats.js"></script>
+	<script type="text/javascript">
+		var sectionNumber = 0;
+	</script>
+	<script type="text/javascript" src="Scripts/gnuplot_svg.js"></script>
+	<link type="text/css" href="Scripts/fixedTable.css" rel="stylesheet" />
+</head>
+<body>
+	<h1>SwissProt</h1>
+	<p>
+		This folder contains two datasets which were extracted from a snapsot of the SWISSPROT/PFAM repository, downloaded on 21/02/2017.
+		These files are <code>sp100000.faa</code> (containing approximately 100,000 amino acid sequences) and <code>sp500000.faa</code>
+		(containing approximately 500,000 sequences). 
+	</p>
+	<h2>Data preparation <sup>[<span data-target="Section_1" class="clickable">Show content</span>]</sup></h2>
+	<div id="Section_1" class="hideable section">
+		<p>
+			Files from download link: <a href="http://www.uniprot.org/downloads">http://www.uniprot.org/downloads</a> accessed 2017-02-21.
+		</p>
+		<ul>
+			<li>From UniProtKB Parent Directory section, downloaded the &ldquo;Reviewed (Swiss-Prot)&rdquo; <code>XML</code>, <code>FASTA</code> and <code>TEXT</code> formats.</li>
+			<li>
+				<code>uniprot_sprot.fasta</code> &mdash; 553,655 sequences; 267,355,334 bytes
+				<ul>
+					<li>FASTA header line has format &gt;<code>SP|ACCESSION|ID</code> in a single chunk.</li>
+					<li>The accession and ID appear to be redundant within a specific version, but it may be that the accession changes between versions.</li>
+					<li>I chose to use the ID field as a unique identifier for this exercise.</li>
+				</ul>
+			</li>
+			<li>
+				<code>uniprot_sprot.dat</code> &mdash; 553,655 sequences; 3,010,910,668 bytes
+				<ul>
+					<li>This is a text format resembling that of GenBank files.</li>
+				</ul>
+			</li>
+		</ul>
+		<p>
+			Files from download link: <a href="ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release">ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release</a>
+		</p>
+		<ul>
+			<li><code>relnotes.txt</code></li>
+			<li><code>swisspfam</code>: 12,845,974 records; 1,429,822,299 bytes</li>
+			<li>pfam domain organisation of all the proteins in pfamseq</li>
+			<li>Complex multi-line format which includes a fasta-like ID line, followed by one or more lines, one per protein family in which the sequence contains a conserved domain.</li>
+			<li><code>pfamseq</code> - Didn&#39;t download this file at the moment; I believe it contains the combined sequences indexed by the swisspfam document above.</li>
+		</ul>
+		<p>
+			Processed uniprot_sprot.fasta and uniprot_sprot.dat with the following awk script (a plain text file):
+		</p>
+		<div style="margin-left: 0.5in;">
+			<textarea style="background-color: black; color: white; overflow: auto; white-space: pre; word-wrap: normal; overflow-x: scroll; font-family: monospace; max-width: 100%;" rows="20" cols="80" readonly="readonly">
+if [ ! -f uniprot_sprot.dat ]l then
+	echo "File 'uniprot_sprot.dat' does not exist!!!"
+	exit 1
+fi
+
+if [ ! -f uniprot_sprot.fasta ]l then
+	echo "File 'uniprot_sprot.fasta' does not exist!!!"
+	exit 1
+fi
+
+if [ ! -f uniprot_sprot.refs ]; then
+	awk '
+		$1 == "ID" || $1 == "DR" && $2 == "Pfam;" { 
+			print; 
+		}' uniprot_sprot.dat >uniprot_sprot.refs
+fi
+
+if [ ! -f swissprot.qrels ]; then
+	awk '
+		$1 == "ID" { 
+			geneId = $2 
+		} 
+		
+		$1 == "DR" && $2 == "Pfam;" { 
+			pfamId = substr($3, 1, length($3) - 1 );
+			geneCount[pfamId] ++;
+			genes[pfamId][geneCount[pfamId]] = geneId;
+		}
+
+		END {
+			for ( pfamId in geneCount ) {
+				for ( i = 1; i <= geneCount[pfamId]; i++ ) {
+					for ( j = 1; j <= geneCount[pfamId]; j++ ) {
+						print genes[pfamId][i] " 0 " genes[pfamId][j] " 1"
+					}
+				}
+			}
+		}
+	' uniprot_sprot.refs >swissprot.qrels
+fi
+
+if [ ! -f swissprot_genes.faa ]; then
+	awk '
+		BEGIN {
+			fileNum = 0;
+			true = 1;
+			false = 0;
+			wanted = false;
+		}
+
+		FNR == 1 {
+			fileNum++;
+		}
+
+		$1 == "ID" { 
+			geneId = $2 
+		} 
+		
+		$1 == "DR" && $2 == "Pfam;" { 
+			pfamId = substr($3, 1, length($3) - 1 );
+			famCount[geneId] ++;
+			fams[geneId][famCount[geneId]] = pfamId;
+		}
+
+		fileNum == 2 {
+			if ( substr($1,1,1) == ">" ) {
+				wanted = false;
+				split($1,idFields,"|");
+				geneId = idFields[3];
+			
+				if ( geneId in famCount ) {
+					wanted = true;
+					classList = fams[geneId][1];
+
+					for ( i = 2; i < famCount[geneId]; i++ ) {
+						classList = classList ";" fams[geneId][i]; 
+					}
+
+					$1 = $1 "|" classList "|"
+				}
+			}
+
+			if ( wanted ) {
+				print;
+			}
+		}
+	' uniprot_sprot.refs uniprot_sprot.fasta >swissprot_genes.faa
+fi
+
+echo Done.
+			</textarea>
+		</div>
+		<p>
+			The import script requires the two downloaded data files as input:
+		</p>
+		<ul>
+			<li><code>uniprot_sprot.dat</code>, from which the protein family cross references are extracted.</li>
+			<li><code>uniprot_sprot.fasta</code>, which contains the raw sequence data.</li>
+		</ul>
+		<p>
+			The script generates two output files: <code>swissprot_genes.fasta</code>, and <code>swissprot.qrels</code>.
+		</p>
+		<ol>
+			<li><code>uniprot_sprot.fasta</code> is scanned to get the ID line for each sequence and the DR lines for all PFam cross-references. These are saved in file <code>uniprot_sprot.refs</code>.</li>
+			<li><code>uniprot_sprot.refs</code> is scanned to create a <code>trec_eval</code>-compatible <code>qrels</code> file called <code>swissprot.qrels</code>.</li>
+			<li>The cross-reference information from <code>uniprot_sprot.refs</code> is combined with raw sequence data from <code>uniprot_sprot.fasta</code> to insert a list of protein family ids into the definitiaon line for each sequence, producing <code>swissprot_genes.fasta</code>. </li>
+		</ol>
+	</div>
+
+	<h2>General statistics <sup>[<span data-target="Section_2" class="clickable">Show content</span>]</sup></h2>
+	<div id="Section_2" class="hideable section">
+		<script type="text/javascript" src="Scripts/swissprot_class_stats.js"></script>
+		<p>
+			Using program <code>GetGeneFamilyStats</code> we get the following detailed statistical summary. Overall, the SwissProt dataset contains
+			<script type="text/javascript">document.write(swissprot.length)</script>
+			protein families, with distinct k-mer populations as follows.  
+		</p>
+		<!-- https://codepen.io/tjvantoll/pen/JEKIu -->
+		<table id="swissprot_table" class="fixed_headers"></table>
+	</div>
+
+	<h2>Nearest Neighbour Kmer Distance Distributions <sup>[<span data-target="Section_3" class="clickable">Show content</span>]</sup></h2>
+	<div id="Section_3" class="hideable section">
+		<p>
+			As an initial exploration, I computed density estimates for the distributions of nearest-neighbour kmer distances between sequences. 
+		</p>
+		<div id="s3_button_holder"></div>
+		<div id="s3_chart_holder" style="height:500px;"></div>
+	</div>
+
+
+
+	<script type="text/javascript">
+	var populateDocument = function () {
+		if ("undefined" === typeof SwissprotStats) {
+			setTimeout(populateDocument, 200);
+			return;
+		}
+		SwissprotStats.InitHideable();
+		SwissprotStats.CreateMutexButtons("s3_button_holder", 2, 50);
+		SwissprotStats.CreateMutexCharts("s3_chart_holder", 2, 50);
+		SwissprotStats.PopulateSwissprotTable("swissprot_table", swissprot, ["N", "Protein family", "Sequence Count", "Total Kmer Count", "Shortest Kmer Count", "Average Kmer Count", "Longest Kmer Count", ]);
+	}
+	populateDocument();
+	</script>
+</body>
+</html>
