@@ -8,7 +8,7 @@
 	<li>Utility programs</li>
 	<li>Experimental GUI programs</li>
 </ul>
-<a name="Description"><h2>Description</h2></a>
+<a name="Description"></a><h2>Description</h2>
 <p>This repository contains the current release(s) of the software developed in the course of my PhD candidature, with subsequent revisions.
 </p>
 <p>
@@ -17,7 +17,7 @@
 <p>Work to date primarily focusses on biological sequence data, including protein and RNA, but the approach should be equally applicable to any sequentially structured symbolic data.</p>
 <p>The programs included in this repository implement algorithms for alignment-free sequence comparison which have been demonstrated to achieve accuracy superior to that of <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI BLAST</a>, with execution speed comparable to that of <a href="http://drive5.com">USEARCH</a>.</p>
 
-<a name="Publications"><h2>Publications</h2></a>
+<a name="Publications"></a><h2>Publications</h2>
 <p>The Similarity Projection concept, algorithm, and preliminary results were published at the 2017 IEEE eScience Conference:</p>
 <ul>
     <li>Buckingham, L., Chappell, T., Hogan, J. M., & Geva, S. (2017, 24-27 Oct. 2017). Similarity Projection: A Geometric Measure for Comparison of Biological Sequences. Paper presented at the 2017 IEEE 13th International Conference on e-Science (e-Science).</li>
@@ -30,9 +30,7 @@
 </ul>
 <p>An extended empirical study is under preparation at present; results and associated software will be posted here in due course. This work was severely impacted by workplace disruption associated with COVID-19.</p>
 
-<a name="Requirements">
-	<h2>Requirements</h2>
-</a>
+<a name="Requirements"></a><h2>Requirements</h2>
 
 <p>The programs are written in C++ and compiled with GCC-10, targeting the current 64-bit version of the Cygwin Posix-like environment on Microsoft Windows, and the current Ubuntu flavour of Linux, although I have found that statically linked Ubuntu executables also work fine on Red Hat Enterprise Linux v7.</p>
 <p>Source&nbsp;code is mainly edited and compiled with Microsoft Visual Studio 2019 (either the Enterprise or Community Edition should suffice), however all build tasks can be executed from the shell. I have also found Visual Studio Code to be a useful cross-platform alternative with nice integration of GDB, which can be helpful at times for debugging.</p>
