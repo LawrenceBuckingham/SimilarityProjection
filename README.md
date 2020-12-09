@@ -3,7 +3,7 @@
 <ul>
 	<li><a href="#Desription">Description</a></li>
 	<li><a href="#Publications">Publications</a></li>
-	<li><a href="Requirements">Requirements</a></li>
+	<li><a href="#Requirements">Requirements</a></li>
 	<li>Get started with Similarity Projection and Compressed <em>k</em>-mer Vocabularies</li>
 	<li>Utility programs</li>
 	<li>Experimental GUI programs</li>
@@ -37,15 +37,13 @@
 <p>The programs are written in C++ and compiled with GCC-10, targeting the current 64-bit version of the Cygwin Posix-like environment on Microsoft Windows, and the current Ubuntu flavour of Linux, although I have found that statically linked Ubuntu executables also work fine on Red Hat Enterprise Linux v7.</p>
 <p>Source&nbsp;code is mainly edited and compiled with Microsoft Visual Studio 2019 (either the Enterprise or Community Edition should suffice), however all build tasks can be executed from the shell. I have also found Visual Studio Code to be a useful cross-platform alternative with nice integration of GDB, which can be helpful at times for debugging.</p>
 <p>Some of these programs use the <a href="https://www.fltk.org/software.php">FLTK library</a> to implement an experimental graphical user interface.</p>
-
 <ul>
     <li>Under Cygwin, use the latest version of FLTK available via the standard Cygwin install/update program.
 </li>
     <li>Under Ubuntu, use the command <code>apt install libfltk1.3-dev</code> to install the library.</li>
     <li>To deploy a binary built under Ubuntu to a Linux environment where a suitable compiler is not available, the FLTK object library can be installed on the target machine by:
-       
         <ul>
-            <li>Create a directory on the target machine. For concreteness, assume the name of the directory is <code>~/libfltk</code>.</li>
+            <li>Create a directory on the target machine. For concreteness, assume the name of the directory is <code>&tilde;/libfltk</code>.</li>
             <li>Copy the following files from Ubuntu to the directory on the target machine:<ul>
                 <li><code>/usr/lib/x86_64-linux-gnu/libfltk.a</code></li>
                 <li><code>/usr/lib/x86_64-linux-gnu/libfltk_gl.so.1.3</code></li>
