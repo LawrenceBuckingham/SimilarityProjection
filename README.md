@@ -3,7 +3,7 @@
 <ul>
 	<li><a href="#Desription">Description</a></li>
 	<li><a href="#Publications">Publications</a></li>
-	<li><a href="Requirements">Requirements</a></li>
+	<li><a href="#Requirements">Requirements</a></li>
 	<li>Get started with Similarity Projection and Compressed <em>k</em>-mer Vocabularies</li>
 	<li>Utility programs</li>
 	<li>Experimental GUI programs</li>
