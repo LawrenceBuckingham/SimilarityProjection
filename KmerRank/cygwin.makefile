@@ -16,8 +16,7 @@ TARGETS= \
 		$(DEST)/AAClustSigEncode \
 		$(DEST)/AAClustCountIndices \
 		$(DEST)/AASP \
-		$(DEST)/AASPDB \
-		$(DEST)/SimProjDP
+		$(DEST)/AASPDB
 
 FLAGS=	-std=gnu++14 \
 		-I $(SIG) \
